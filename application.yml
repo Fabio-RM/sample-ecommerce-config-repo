@@ -37,5 +37,5 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://keycloak:8080/realms/ecommerce-realm
-          jwk-set-uri: http://keycloak:8080/realms/ecommerce-realm/protocol/openid-connect/certs
+          issuer-uri: http://keycloak:9000/realms/sample-ecommerce
+          jwk-set-uri: http://keycloak:9000/realms/sample-ecommerce/protocol/openid-connect/certs
