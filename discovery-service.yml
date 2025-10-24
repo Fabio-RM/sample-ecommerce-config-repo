@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: discovery-service
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://keycloak:9000/realms/sample-ecommerce
+  
+  eureka:
+    client:
+      register-with-eureka: false
+      fetch-registry: false
+    server:
+      enable-self-preservation: false
+      eviction-interval-timer-in-ms: 5000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info
+  endpoint:
+    health:
+      show-details: always
