@@ -1,0 +1,41 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Fabio-RM/sample-ecommerce-config-repo.git
+          default-label: main
+          clone-on-start: true
+  jackson:
+    serialization:
+      INDENT_OUTPUT: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://discovery-service:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    org.hibernate.SQL: WARN
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info
+  endpoint:
+    health:
+      show-details: always
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://keycloak:8080/realms/ecommerce-realm
+          jwk-set-uri: http://keycloak:8080/realms/ecommerce-realm/protocol/openid-connect/certs
