@@ -31,11 +31,3 @@ management:
   endpoint:
     health:
       show-details: always
-
-spring:
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          issuer-uri: http://keycloak:9000/realms/sample-ecommerce
-          jwk-set-uri: http://keycloak:9000/realms/sample-ecommerce/protocol/openid-connect/certs
