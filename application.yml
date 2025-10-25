@@ -6,9 +6,6 @@ spring:
           uri: https://github.com/Fabio-RM/sample-ecommerce-config-repo.git
           default-label: main
           clone-on-start: true
-  jackson:
-    serialization:
-      INDENT_OUTPUT: true
 
 eureka:
   client:
